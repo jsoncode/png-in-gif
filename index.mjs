@@ -4,7 +4,7 @@ import FormData from 'form-data'
 
 // upload file
 const form = new FormData();
-form.append('files[]', fs.createReadStream('GIF6-Optmized-old.gif'));
+form.append('files[]', fs.createReadStream('./input.gif'));
 
 let upload = await got.post('https://extractgif.imageonline.co/ajax_upload_file.php', {
     body: form
